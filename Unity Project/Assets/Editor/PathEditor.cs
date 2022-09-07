@@ -1,19 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEditor;
 
 [CustomEditor(typeof(PathCreator))]
 public class PathEditor : Editor {
 
     PathCreator creator;
-    Path Path
-    {
-        get
-        {
-            return creator.path;
-        }
-    }
+    Path Path => creator.path;
 
     const float segmentSelectDistanceThreshold = .1f;
     int selectedSegmentIndex = -1;
