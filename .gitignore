@@ -8,3 +8,5 @@ obj
 *.csproj
 Library
 Temp
+Unity Project/Library
+Unity Project/Temp
