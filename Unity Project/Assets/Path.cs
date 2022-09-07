@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
@@ -23,20 +22,11 @@ public class Path {
         };
     }
 
-    public Vector2 this[int i]
-    {
-        get
-        {
-            return points[i];
-        }
-    }
+    public Vector2 this[int i] => points[i];
 
     public bool IsClosed
     {
-        get
-        {
-            return isClosed;
-        }
+        get => isClosed;
         set
         {
             if (isClosed != value)
@@ -67,10 +57,7 @@ public class Path {
 
     public bool AutoSetControlPoints
     {
-        get
-        {
-            return autoSetControlPoints;
-        }
+        get => autoSetControlPoints;
         set
         {
             if (autoSetControlPoints != value)
@@ -84,21 +71,9 @@ public class Path {
         }
     }
 
-    public int NumPoints
-    {
-        get
-        {
-            return points.Count;
-        }
-    }
+    public int NumPoints => points.Count;
 
-    public int NumSegments
-    {
-        get
-        {
-            return points.Count/3;
-        }
-    }
+    public int NumSegments => points.Count/3;
 
     public void AddSegment(Vector2 anchorPos)
     {
