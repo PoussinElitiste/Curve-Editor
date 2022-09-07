@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 
-public class PathCreator : MonoBehaviour {
-
-    [HideInInspector]
+public class PathCreator : MonoBehaviour 
+{
     public Path path;
 
 	public Color anchorCol = Color.red;

@@ -4,12 +4,9 @@ using UnityEngine;
 [System.Serializable]
 public class Path {
 
-    [SerializeField, HideInInspector]
-    List<Vector2> points;
-    [SerializeField, HideInInspector]
-    bool isClosed;
-    [SerializeField, HideInInspector]
-    bool autoSetControlPoints;
+    [SerializeField] List<Vector2> points;
+    [SerializeField, HideInInspector] bool isClosed;
+    [SerializeField, HideInInspector] bool autoSetControlPoints;
 
     public Path(Vector2 centre)
     {
@@ -125,7 +122,7 @@ public class Path {
 
     public Vector2[] GetPointsInSegment(int i)
     {
-        return new Vector2[] { points[i * 3], points[i * 3 + 1], points[i * 3 + 2], points[LoopIndex(i * 3 + 3)] };
+        return new [] { points[i * 3], points[i * 3 + 1], points[i * 3 + 2], points[LoopIndex(i * 3 + 3)] };
     }
 
     public void MovePoint(int i, Vector2 pos)
